@@ -1,0 +1,117 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px; /* Added padding for spacing */
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF; /* Blue color for heading */
+}
+
+/* Task form */
+#taskForm {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+    margin-bottom: 20px; /* Space below the form */
+}
+
+#taskForm input, #taskForm select, #taskForm button {
+    padding: 10px; /* Padding inside input fields */
+    font-size: 16px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#taskForm button {
+    background-color: #007BFF; /* Blue background for button */
+    color: white;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#taskForm button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Task filters */
+.task-controls {
+    display: flex;
+    gap: 10px; /* Space between controls */
+    margin-bottom: 20px; /* Space below the controls */
+}
+
+.task-controls input, .task-controls select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Task list */
+#taskList {
+    display: flex;
+    flex-direction: column; /* Stack tasks vertically */
+    gap: 10px; /* Space between tasks */
+}
+
+/* Task item */
+.task-item {
+    background: white;
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.task-completed {
+    text-decoration: line-through; /* Strike-through for completed tasks */
+    color: #888; /* Grey color for completed tasks */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+.task-actions button {
+    margin-left: 10px; /* Space between buttons */
+    padding: 5px 10px; /* Reduced padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px;
+}
+
+.complete-btn {
+    background-color: #28a745; /* Green background for complete button */
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red background for delete button */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
