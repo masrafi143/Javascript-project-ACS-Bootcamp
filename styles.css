@@ -1,9 +1,8 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 20px; /* Added padding for spacing */
+    padding: 20px;
     color: #333;
 }
 
@@ -12,45 +11,43 @@ body {
     margin: 20px auto;
     padding: 20px;
     background: white;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #007BFF; /* Blue color for heading */
+    color: #007BFF;
 }
 
-/* Task form */
 #taskForm {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 10px; /* Space between items */
-    margin-bottom: 20px; /* Space below the form */
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 #taskForm input, #taskForm select, #taskForm button {
-    padding: 10px; /* Padding inside input fields */
+    padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #taskForm button {
-    background-color: #007BFF; /* Blue background for button */
+    background-color: #007BFF;
     color: white;
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer;
 }
 
 #taskForm button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Task filters */
 .task-controls {
     display: flex;
-    gap: 10px; /* Space between controls */
-    margin-bottom: 20px; /* Space below the controls */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .task-controls input, .task-controls select {
@@ -60,58 +57,77 @@ h1 {
     border-radius: 5px;
 }
 
-/* Task list */
 #taskList {
     display: flex;
-    flex-direction: column; /* Stack tasks vertically */
-    gap: 10px; /* Space between tasks */
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Task item */
 .task-item {
     background: white;
-    padding: 10px; /* Reduced padding */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between; /* Space between title and buttons */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     transition: transform 0.2s ease;
 }
 
 .task-item:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
+    transform: scale(1.02);
 }
 
 .task-completed {
-    text-decoration: line-through; /* Strike-through for completed tasks */
-    color: #888; /* Grey color for completed tasks */
-    opacity: 0.7; /* Slightly transparent */
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
 }
 
 .task-actions button {
-    margin-left: 10px; /* Space between buttons */
-    padding: 5px 10px; /* Reduced padding */
+    margin-left: 10px;
+    padding: 5px 10px;
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 14px;
 }
 
 .complete-btn {
-    background-color: #28a745; /* Green background for complete button */
+    background-color: #28a745;
     color: white;
 }
 
 .complete-btn:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
 }
 
 .delete-btn {
-    background-color: #dc3545; /* Red background for delete button */
+    background-color: #dc3545;
     color: white;
 }
 
 .delete-btn:hover {
-    background-color: #c82333; /* Darker red on hover */
+    background-color: #c82333;
+}
+
+@media (max-width: 575px) {
+    .task-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-controls input {
+        order: 3; 
+        width: 90%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .task-controls select, 
+    .task-controls button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
 }
